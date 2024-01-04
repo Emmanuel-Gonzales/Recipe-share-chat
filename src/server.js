@@ -12,8 +12,6 @@ app.get('/', (req, res, next) => {
   res.status(200).send('Welcome to the Backend');
 });
 
-function start(port){
-  app.listen(port, () => console.log(`listening on port ${port}`));
-}
+const start = (port) => app.listen(port, () => console.log(`listening on port ${port}`));
 
 module.exports = {start, app};
